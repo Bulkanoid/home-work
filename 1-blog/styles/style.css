@@ -1,0 +1,75 @@
+body {
+    background: linear-gradient(180.00deg, rgb(55, 65, 81), rgb(17, 24, 39) 100%);
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h1 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 38px;
+}
+
+header > a {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+header nav li a,
+header form input {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px
+}
+
+header form input {
+    color: #adb2b7;
+    background-color: #1f293799;;
+}
+
+.hero_section > p {
+    color: #adb2b7;
+}
+
+.hero_section>p,
+.profile_person {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.profile_name {
+    color: #fff;
+}
+
+.profile_function {
+    color: #adb2b7;
+}
+
+article {
+    color: #fff;
+    font-weight: 400;
+}
+
+.article_top {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.article_middle,
+.article_end {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+footer {
+    color: #adb2b7;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}

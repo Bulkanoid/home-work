@@ -1,6 +1,7 @@
 body {
     background: linear-gradient(180.00deg, rgb(55, 65, 81), rgb(17, 24, 39) 100%);
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 p {
@@ -10,7 +11,12 @@ p {
 a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
+
+a:hover {
+    color: #4B5563;
+} 
 
 h1 {
     color: #fff;
@@ -18,21 +24,31 @@ h1 {
     font-weight: 400;
     line-height: 38px;
     margin: 0 0 30px 0;
+    text-align: center;
 }
 
 /* HEADER */
 header {
-    margin: 80px 0;
+    margin: 80px auto;
+    display: flex;
+    max-width: 1440px;
+    align-items: center;
 }
 
 .logo_anchor {
     font-size: 18px;
     font-weight: 400;
     line-height: 21px;
-    
+    display: flex;
+    align-items: center;
+    margin-right: 78px;
+    gap: 11px;
 }
 
 .logo_anchor div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 35px;
     height: 35px;
     background-color: #4B5563;
@@ -44,6 +60,8 @@ header {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    gap: 32px;
 }
 
 .menu a,
@@ -53,15 +71,31 @@ header {
     line-height: 19px
 }
 
+.search {
+    margin-left: auto;
+    position: relative;
+}
+
+.search img {
+    position: absolute;
+    top: 13px;
+    left: 18px;
+}
+
 .search input {
     color: #adb2b7;
     background-color: #1f293799;
     border: none;
     border-radius: 100px;
-    padding: 10px 130px 10px 50px;
+    padding: 10px 0 10px 50px;
 }
 
 /* MAIN */
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 .hero_section {
     margin-bottom: 70px;
 }
@@ -69,6 +103,7 @@ header {
 .title {
     color: #adb2b7;
     margin-bottom: 14px;
+    text-align: center;
 }
 
 .title,
@@ -78,12 +113,20 @@ header {
     line-height: 16px;
 }
 
+.heroImageContainer {
+    text-align: center;
+}
+
 .heroImage {
-    max-width: 900px;
+    width: 100%;
 }
 
 .profile {
     margin-bottom: 30px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 16px;
 }
 
 .profile_person p:first-child {
@@ -98,8 +141,9 @@ header {
 .article_section {
     color: #fff;
     font-weight: 400;
-    margin-bottom: 100px;
     max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 100px;
 }
 
 .article_section p:first-child {
@@ -123,4 +167,28 @@ footer {
     font-weight: 400;
     line-height: 28px;
     margin-bottom: 80px;
+    text-align: center;
+}
+
+@media (max-width: 730px) {
+  header {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .search {
+    margin-left: 0;
+  }
+
+  .logo_anchor {
+    margin-right: 0;
+  }
+
+  .menu ul {
+    gap: 70px;
+  }
+
+  .article_section {
+    padding: 0 40px;
+  }
 }

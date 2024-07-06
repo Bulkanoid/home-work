@@ -7,24 +7,24 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <form action="#" method="get">
-        <header>
+    <form action="#" method="get" class="registration-form">
+        <header class="form-header">
             <h1>Регистрация</h1>
-            <p>
+            <p class="login">
                 <span>Уже есть аккаунт?</span>
                 <a href="#">Войти</a>
             </p>
         </header>
-            <main>
+            <main class="form-main">
                 <input type="text" id="company" name="company" value="Моя компания" required>
-                <div>
+                <div class="name-fields">
                     <input type="text" id="name" name="name" placeholder="Имя" required>
                     <input type="text" id="surname" name="surname" placeholder="Фамилия" required>   
                 </div>
                 <input type="email" id="email" name="email" placeholder="E-mail" required>
                 <button type="submit">Зарегистрироваться</button>
             </main>
-            <footer>
+            <footer class="form-footer">
                 <input type="checkbox" id="agree" name="agree" required>
                 <label for="agree">
                     Я прочитал и принимаю

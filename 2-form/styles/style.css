@@ -1,62 +1,182 @@
-main {
-    background-color: #FFFEFE;
+
+* {
+    box-sizing: border-box;
 }
 
-header h1 {
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(225deg, #fdc5c5 25.45%, rgba(242, 152, 222, 0) 100%),
+        linear-gradient(225deg, #ffa5a5 33.09%, rgba(255, 255, 255, 0) 82.34%),
+        #f39494;;
+}
+
+input {
+    padding: 9px 0 9px 9px;
+    font-size: 16px;
+    line-height: 22px;
+    border: none;
+    border-radius: 5px;
+    color: #999999;
+    background-color: #F5F5F5;
+    font-style: italic;
+    font-weight: 400;
+    border: 1px solid transparent;
+}
+
+.registration-form {
+    flex: 0 582px;
+    margin: 0 20px;
+    padding: 72px 94px;
+    border-radius: 10px;
+    background-color: #FFFEFE;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+input:focus {
+    color: #333333;
+    font-weight: 600;
+    background-color: #FFFFFF;
+    outline: 0;
+    border-color: #F5F5F5;
+}
+
+.form-footer input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.form-footer input[type="checkbox"]+label {
+    position: relative;
+    padding-left: 25px;
+}
+
+.form-footer input[type="checkbox"]+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: translateY(-40%);
+    width: 15px;
+    height: 16px;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    background: #f5f5f5;
+    cursor: pointer
+}
+
+.form-footer input[type="checkbox"]:checked+label:before {
+    background: #089fe0;
+    border-color: #089fe0;
+}
+
+.form-footer input[type="checkbox"]:checked+label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 40%;
+    transform: translateY(-40%) rotate(45deg);
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+}
+
+.form-header {
+    margin-bottom: 47px;
+}
+
+.form-header h1 {
+    margin: 0;
     color: #333333;
     font-size: 36px;
     font-weight: 700;
     line-height: 49px;
+    text-align: center;
 }
 
-header div span {
+.form-header .login {
+    margin: 0;
+    text-align: center;
+}
+
+.form-header .login span {
     color: #666666;
     font-size: 18px;
     font-weight: 400;
     line-height: 25px;
 }
 
-header div a {
+.form-header .login a {
     color: #089fe0;
     font-size: 18px;
     font-weight: 400;
     line-height: 25px;
 }
 
-form > div:first-child input {
-    color: #333333;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22px;
+.form-main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 22px;
+    margin-bottom: 22px;
 }
 
-form input:not(#company) {
-    color: #999999;
-    background-color: #F5F5F5;
-    font-style: italic;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
+.form-main .name-fields {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
 }
 
-form button {
+.form-main .name-fields #name {
+    flex: 1;
+    min-width: 48%;
+    border-radius: 5px 0 0 5px;
+    margin-right: -1px;
+}
+
+.form-main .name-fields #surname {
+    flex: 1;
+    min-width: 48%;
+    border-radius: 0 5px 5px 0;
+    margin-left: -1px;
+}
+
+.form-main button {
     color: #ffffff;
     font-size: 18px;
     font-weight: 400;
     line-height: 25px;
     background-color: #089FE0;
+    padding: 9px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
 }
 
-form > div:last-child span {
+.form-main button:hover {
+    background-color: #4cbbea;
+}
+
+.form-footer label {
     color: #666666;
     font-size: 14px;
     font-weight: 400;
     line-height: 19px;
 }
 
-form > div:last-child a {
+.form-footer label a {
     color: #089fe0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 19px;
+    text-decoration: none;
+    margin-left: 8px;
+}
+
+@media (max-width: 420px) {
+    .registration-form {
+        padding: 72px 20px;
+        margin: 0 10px;
+    }
 }

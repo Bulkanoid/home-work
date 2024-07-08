@@ -31,7 +31,7 @@ h1 {
 header {
     margin: 80px auto;
     display: flex;
-    max-width: 1440px;
+    max-width: 1080px;
     align-items: center;
 }
 
@@ -92,7 +92,7 @@ header {
 
 /* MAIN */
 main {
-    max-width: 1440px;
+    max-width: 1080px;
     margin: 0 auto;
 }
 
@@ -113,12 +113,9 @@ main {
     line-height: 16px;
 }
 
-.heroImageContainer {
-    text-align: center;
-}
-
 .heroImage {
-    width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 .profile {

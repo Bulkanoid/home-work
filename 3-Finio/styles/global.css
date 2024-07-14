@@ -1,0 +1,34 @@
+:root { 
+    --color-bg-dark: #357efe;
+    --color-smoke-hight: rgb(78, 93, 124); /*#4e5d7c*/
+    --color-smoke-dark:  rgba(78, 93, 124, 0.5);            
+    --color-smoke-medium: rgba(255, 255, 255, 0.6);
+    --color-smoke-light: rgba(255, 255, 255, 0.8);
+    --color-profit-first: #1abc9c;
+    --color-profit-second: #ffc736;
+    --color-primary: #357efe;
+    --color-secondary: #fff;
+    --color-text: #000;
+    --border-8: 8px;
+    --color-separator: rgba(78, 93, 124, 0.08);
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: "Inter", sans-serif;;
+    background-color: var(--color-secondary);
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}

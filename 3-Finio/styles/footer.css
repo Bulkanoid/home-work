@@ -1,0 +1,145 @@
+.footer {
+    background-color: var(--color-footer-bg);
+}
+
+.footer__main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 'logo possibilities confidentiality contacts';
+    padding: 80px 0 40px;
+    border-bottom: 1px solid var(--color-separator);
+}
+
+.footer__logo {
+    grid-area: logo;
+}
+
+.footer__possibilities {
+    grid-area: possibilities;
+    justify-self: center;
+}
+.footer__confidentiality {
+    grid-area: confidentiality;
+    justify-self: center;
+}
+.footer__contacts {
+    grid-area: contacts;
+    justify-self: right;
+}
+
+.footer__logo img {
+    margin-bottom: 16px;
+}
+
+.footer__text {
+    color: var(--color-smoke-footer);
+    white-space: nowrap;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.nav-list__item {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    color: var(--color-smoke-footer);
+    white-space: nowrap;
+}
+
+.nav-list__item a{
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
+}
+
+.nav-list__item a:hover {
+    color: var(--color-smoke-footer);
+}
+
+.footer__copyright {
+    padding: 32px 0;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    color: var(--color-smoke-footer);
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__copyright-right {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+@media (max-width: 1200px) {
+    .footer__main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "logo possibilities confidentiality"
+            "logo . contacts";
+    }
+
+    .footer__contacts {
+        grid-area: contacts;
+        justify-self: center !important;
+    }
+}
+
+@media (max-width: 850px) {
+    .footer__main {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "logo possibilities"
+            "logo confidentiality"
+            "logo contacts"
+        ;
+        column-gap: 80px;
+    }
+
+    .footer__possibilities {
+        justify-self: start !important;
+    }
+
+    .footer__contacts {
+        grid-area: contacts;
+        justify-self: start !important;
+    }
+
+    .footer__confidentiality {
+        justify-self: start !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .footer__main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+            "logo"
+            "possibilities"
+            "confidentiality"
+            "contacts"
+        ;
+    }
+
+    .footer__copyright {
+        flex-direction: column;
+        gap: 24px;
+        padding: 48px 0 64px;
+    }
+
+
+    .footer__copyright-left {
+        order: 2;
+    }
+}

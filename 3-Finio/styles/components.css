@@ -4,22 +4,62 @@
     margin: 0 auto;
 }
 
-.rates {
-    margin: 0 24px;
+.section-dark {
+    background-color: var(--color-bg-dark);
 }
 
+.padding-0X24 {
+    padding: 0 24px;
+}
+
+.padding-80X24X120 {
+    padding: 80px 24px 120px;
+}
+
+.padding-120X24 {
+    padding: 120px 24px;
+}
+
+.width-1392 {
+    max-width: var(--layout-width);
+    margin: 0 auto;
+}
+
+.width-1156 {
+    max-width: var(--layout-width-small);
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .padding-120X24 {
+            padding: 64px 24px;
+    }
+
+    .padding-80X24X120 {
+        padding: 48px 24px 64px;
+    }
+}
 
 /* Button */
 
 .button {
     border-radius: 47px;
-    padding: 12px 0;
+    
     text-align: center ;
     font-weight: 800;
     font-size: 17px;
     line-height: 140%;
     display: block;
     transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.button-12 {
+    padding: 12px 0;
+}
+
+.button-12x32 {
+    padding: 12px 32px;
+    display: block;
 }
 
 .button_secondary {
@@ -33,7 +73,22 @@
 }
 
 
+
 /* Headlings */
+
+.headling_h1 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+.headling_h3 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 120%;
+    margin: 0;
+}
 
 .headling {
     font-weight: 600;
@@ -42,42 +97,42 @@
     margin: 0;
 }
 
-.headling__light {
+.headling_light {
     color: var(--color-secondary);
 }
 
-.headling__dark {
+.headling_dark {
     color: var(--color-text);
 }
 
-@media (max-width: 605px) {
+@media (max-width: 800px) {
     .headling {
         font-size: 36px;
     }
 }
 
 
-/* Paragraph */
+/* text */
 
-.paragraph {
+.text {
     font-weight: 500;
     line-height: 140%;
     margin: 0;
 }
 
-.paragraph__small {
+.text__small {
     font-size: 17px;
 }
 
-.paragraph__medium {
+.text__medium {
     font-size: 18px;
 }
 
-.paragraph__light {
+.text__light {
     color: var(--color-smoke-light);
 }
 
-.paragraph__dark {
+.text__dark {
     color: var(--color-smoke-dark);
 }
 
@@ -101,7 +156,7 @@
         color: var(--color-secondary);
     }
 
-    & .paragraph {
+    & .text {
         color: var(--color-smoke-medium);
     }
 
